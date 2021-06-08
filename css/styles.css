@@ -95,16 +95,13 @@ header {
 .contacts .item + .item {
   margin-left: 50px;
 }
-.contacts .link:focus,
-.contacts .link:hover {
+.contacts .link-head:focus,
+.contacts .link-head:hover {
   color: var(--primary-blue-color);
   fill: var(--primary-blue-color);
 }
-.cont-icons {
-  fill: var(--primary-grey-color);
-}
-.cont-icons:hover {
-  fill: var(--primary-blue-color);
+.link-head {
+  display: block;
 }
 .contact {
   flex-direction: column;
@@ -122,9 +119,10 @@ header {
 .contacts .item {
   white-space: nowrap;
 }
-.contacts .link {
+.contacts .link-head {
   color: var(--primary-grey-color);
   font-size: 14px;
+  fill: var(--primary-grey-color);
 }
 .main-pages {
   text-align: center;
@@ -237,10 +235,14 @@ header {
 .activity .title {
   padding-top: 0;
 }
+.di {
+  padding-bottom: 30px;
+}
 .team .container .link {
   display: block;
   text-align: center;
   width: 270px;
+  padding-bottom: 16px;
 }
 .discription .link {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -264,12 +266,15 @@ header {
   font-size: 16px;
   line-height: 1.18;
   color: var(--primary-grey-color);
-  padding-bottom: 30px;
   margin: 0;
+  margin-bottom: 16px;
 }
 .discription {
   display: flex;
   justify-content: space-between;
+}
+.social-net-link {
+  padding-bottom: 30px;
 }
 .discription ul {
   display: flex;
@@ -288,6 +293,7 @@ footer {
 footer .container {
   padding-top: 60px;
   padding-bottom: 60px;
+  align-items: baseline;
 }
 .Std {
   color: var(--primary-white-color);
@@ -308,6 +314,7 @@ footer .container {
   font-size: 16px;
   line-height: 1.88;
   padding: 4px 24px 20px;
+  margin: 0;
 }
 .test {
   margin-bottom: 94px;
@@ -322,6 +329,7 @@ footer .container {
   margin-bottom: 30px;
   border: 1px solid #eeeeee;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .item-flex:nth-child(3n) {
@@ -341,12 +349,11 @@ footer .container {
   vertical-align: middle;
   display: inline-block;
   margin-right: 10px;
-  fill: var(--primary-grey-color);
 }
 .cont-icon-dignity {
   background: var(--primary-button-color);
   border-radius: 4px;
-  padding: 100px, 25px;
+  padding: 25px 100px;
   width: 270px;
   height: 120px;
   display: flex;
@@ -388,8 +395,7 @@ footer .container {
   justify-content: center;
 }
 .icon-client:hover {
-  background: var(--primary-blue-color);
-  fill: var(--primary-white-color);
+  fill: var(--primary-blue-color);
 }
 
 .contact li + li {
@@ -398,10 +404,7 @@ footer .container {
 footer .container {
   display: flex;
 }
-.subscribe {
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
+
 .join {
   margin-left: 70px;
 }
@@ -410,8 +413,13 @@ footer .container {
   margin-left: -10px;
 }
 .subscribe {
-  text-align: center;
   color: var(--primary-white-color);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1, 14;
 }
 .join-button {
   margin-left: 10px;
